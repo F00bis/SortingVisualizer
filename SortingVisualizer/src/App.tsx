@@ -1,12 +1,10 @@
 import './App.css'
-import { BarsContainer } from './components/Bars'
+import { BarsContainer } from './components/BarsContainer'
 
 function App() {
 
   return (
-    <>
-      <BarsContainer/>
-    </>
+      <BarsContainer />
   )
 }
 
