@@ -6,7 +6,7 @@ export function BarsContainer() {
     const [barValues, setBarValues] = useState<Array<BarProps>>(generateRandomBarValues(quantity));
 
     return (
-        <div className="px-4 flex flex-row grow items-end h-4/5 justify-center w-auto">
+        <div className="flex flex-row flex-grow items-end h-4/5 my-auto justify-center">
             {barValues.map((barValue: BarProps) => (
                 <Bar
                     value={barValue.value}
@@ -23,7 +23,7 @@ const generateRandomBarValues = (quantity: number) => {
     return Array.from({ length: quantity }, () => ({
         value: Math.floor(Math.random() * (100 - 5) + 5),
         color: '#CC33EE',
-        width: `${(100 / quantity)}%`,
+        width: `${(100 / quantity) * 0.8}%`,
         quantity: quantity
     }));
 }
